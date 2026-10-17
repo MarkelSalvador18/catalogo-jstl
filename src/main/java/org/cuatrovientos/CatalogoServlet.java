@@ -1,7 +1,10 @@
 package org.cuatrovientos; 
 import java.io.IOException; 
 import java.math.BigDecimal; 
-import java.util.List; 
+import java.util.List;
+
+import org.cuatrovientos.Cursos.Curso;
+
 import jakarta.servlet.ServletException; 
 import jakarta.servlet.annotation.WebServlet; 
 import jakarta.servlet.http.HttpServlet; 
@@ -16,12 +19,14 @@ public class CatalogoServlet extends HttpServlet {
             HttpServletRequest request, 
             HttpServletResponse response) 
             throws ServletException, IOException { 
-        List<Product> products = List.of(
-            new Product(1, "Teclado", new BigDecimal("50,00")),
-            new Product(2, "Raton", new BigDecimal("30,00")),
-            new Product(3, "Monitor", new BigDecimal("120,00"))
+        List<Curso> cursos = List.of(
+            new Curso(1, "DAM", 50, 20, 8),
+            new Curso(2, "ASIR", 35, 19, 9),
+            new Curso(3, "CIF", 100, 20, 10),
+            new Curso(4, "SMR", 70, 24, 9),
+            new Curso(5, "DAW", 45, 20, 8)
         );
-        request.setAttribute("products", products); 
+        request.setAttribute("courses", cursos); 
         request.getRequestDispatcher("/WEB-INF/views/catalog.jsp") 
                .forward(request, response); 
     } 
