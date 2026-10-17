@@ -26,7 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach items="${course}" var="curso" varStatus="status">
+                    <c:forEach items="${courses}" var="curso" varStatus="status">
                         <tr>
                             <td>${status.count}</td>
                             <td><c:out value="${curso.id}"/></td>

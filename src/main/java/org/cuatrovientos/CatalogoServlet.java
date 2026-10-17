@@ -1,6 +1,5 @@
 package org.cuatrovientos; 
 import java.io.IOException; 
-import java.math.BigDecimal; 
 import java.util.List;
 
 import org.cuatrovientos.Cursos.Curso;
